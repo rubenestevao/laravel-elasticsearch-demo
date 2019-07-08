@@ -17,6 +17,8 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->longText('description')->nullable();
+            $table->integer('comments_number');
+            $table->boolean('publish');
             $table->timestamps();
         });
     }

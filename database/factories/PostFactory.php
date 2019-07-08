@@ -9,5 +9,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         'title' => $faker->title,
         'description' => $faker->text,
+        'comments_number' => $faker->numberBetween(0,20),
+        'publish' => $faker->boolean,
     ];
 });
